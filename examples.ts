@@ -19,6 +19,7 @@ export enum UserRoleEnum {
   Regular = 3
 }
 
+// nested objects
 var adminUser = new Builder()
   .of<User>()
   .id(1)
@@ -34,6 +35,7 @@ var adminUser = new Builder()
   )
   .build();
 
+// new object based on an existing prototype
 var regularUser = new Builder()
   .of<User>(adminUser)
   .role(UserRoleEnum.Regular)
